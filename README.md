@@ -41,6 +41,14 @@ In order to create a new package the user should
 6)  Add the project to
     [Appveyor](https://ci.appveyor.com/project/poissonconsulting/pkgtemplate).
 7)  Push the changes to the new repository.
+8)  Go to the repository GitHub
+    [settings](https://github.com/poissonconsulting/pkgtemplate/settings)
+    and set the GitHub Pages Source to be the master branch /docs
+    folder.
+9)  Edit the GitHub repository
+    [description](https://github.com/poissonconsulting/pkgtemplate/) and
+    set the website to be
+    <https://poissonconsulting.github.io/pkgtemplate/>.
 
 ## Installation
 

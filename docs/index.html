@@ -50,14 +50,7 @@
   <a href="news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/poissonconsulting/mcmcr">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -86,13 +79,15 @@
 <p>In order to create a new package the user should</p>
 <ol style="list-style-type: decimal">
 <li>Go to the pkgtemplate <a href="https://github.com/poissonconsulting/pkgtemplate">GitHub repository</a> and choose ‘Use this template’.</li>
-<li>Clone the new repository and replace ‘pkgtemplate’ whereever it occurs with the new name of the package (including in this README.Rmd file).</li>
+<li>Clone the new repository and replace ‘pkgtemplate’ with the name of the new package in <code>DESCRIPTION</code>, <code>NEWS.md</code>, <code>tests/testthat.R</code> and this <code>README.Rmd</code> file.</li>
 <li>
 <code><a href="https://rdrr.io/pkg/devtools/man/check.html">devtools::check()</a></code> the package and fix any Errors, Warnings or Notes.</li>
-<li>Knit the README.Rmd file and <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site()</a></code>.</li>
+<li>Knit this <code>README.Rmd</code> file and <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site()</a></code>.</li>
 <li>Add the project to <a href="https://www.travis-ci.com/poissonconsulting/pkgtemplate">Travis</a> and in the <a href="https://www.travis-ci.com/poissonconsulting/pkgtemplate/settings">Settings</a> add a Cron Job to run the master branch daily if there hasn’t been a build in the last 24h.</li>
 <li>Add the project to <a href="https://ci.appveyor.com/project/poissonconsulting/pkgtemplate">Appveyor</a>.</li>
 <li>Push the changes to the new repository.</li>
+<li>Go to the repository GitHub <a href="https://github.com/poissonconsulting/pkgtemplate/settings">settings</a> and set the GitHub Pages Source to be the master branch /docs folder.</li>
+<li>Edit the GitHub repository <a href="https://github.com/poissonconsulting/pkgtemplate/">description</a> and set the website to be <a href="https://poissonconsulting.github.io/pkgtemplate/" class="uri">https://poissonconsulting.github.io/pkgtemplate/</a>.</li>
 </ol>
 </div>
 <div id="installation" class="section level2">
@@ -116,9 +111,7 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/poissonconsulting/mcmcr">https://​github.com/​poissonconsulting/​mcmcr</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/poissonconsulting/mcmcr/issues">https://​github.com/​poissonconsulting/​mcmcr/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/poissonconsulting/pkgtemplate/issues">https://​github.com/​poissonconsulting/​pkgtemplate/​issues</a>
 </li>
 </ul>
 </div>
