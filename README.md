@@ -31,7 +31,7 @@ In order to create a new package the user should
     this `README.Rmd` file.
 3)  `devtools::check()` the package and fix any Errors, Warnings or
     Notes.
-4)  Knit the README.Rmd file and `pkgdown::build_site()`.
+4)  Knit this `README.Rmd` file and `pkgdown::build_site()`.
 5)  Add the project to
     [Travis](https://www.travis-ci.com/poissonconsulting/pkgtemplate)
     and in the
