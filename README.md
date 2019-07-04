@@ -26,9 +26,9 @@ In order to create a new package the user should
 1)  Go to the pkgtemplate [GitHub
     repository](https://github.com/poissonconsulting/pkgtemplate) and
     choose ‘Use this template’.
-2)  Clone the new repository and replace ‘pkgtemplate’ whereever it
-    occurs with the new name of the package (including in this
-    README.Rmd file).
+2)  Clone the new repository and replace ‘pkgtemplate’ with the name of
+    the new package in `DESCRIPTION`, `NEWS.md`, `tests/testthat.R` and
+    this `README.Rmd` file.
 3)  `devtools::check()` the package and fix any Errors, Warnings or
     Notes.
 4)  Knit the README.Rmd file and `pkgdown::build_site()`.
