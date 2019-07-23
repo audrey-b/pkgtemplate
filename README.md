@@ -15,6 +15,9 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/pkg
 coverage](https://codecov.io/gh/poissonconsulting/pkgtemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/pkgtemplate?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/pkgtemplate)](https://cran.r-project.org/package=pkgtemplate)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/pkgtemplate)
 <!-- badges: end -->
 
 pkgtemplate provides a template for a new R package.
