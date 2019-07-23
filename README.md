@@ -81,7 +81,6 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/pkgtemplate/pulls)
 are always welcome.
 
-Please note that the ‘pkgtemplate’ project is released with a
-[Contributor Code of
+Please note that this project is released with a [Contributor Code of
 Conduct](https://poissonconsulting.github.io/pkgtemplate/CODE_OF_CONDUCT.html).
-By contributing to this project, you agree to abide by its terms.
+By contributing, you agree to abide by its terms.
