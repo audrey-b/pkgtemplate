@@ -61,13 +61,17 @@ In order to create a new package the user should
 To install the latest release version from
 [CRAN](https://cran.r-project.org)
 
-    install.packages("pkgtemplate")
+``` r
+install.packages("pkgtemplate")
+```
 
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/hmstimer)
 
-    # install.packages("remotes")
-    remotes::install_github("poissonconsulting/pkgtemplate")
+``` r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/pkgtemplate")
+```
 
 ## Contribution
 
