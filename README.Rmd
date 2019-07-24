@@ -61,5 +61,5 @@ Please report any [issues](https://github.com/poissonconsulting/pkgtemplate/issu
 
 [Pull requests](https://github.com/poissonconsulting/pkgtemplate/pulls) are always welcome.
 
-Please note that this project is released with a [Contributor Code of Conduct](https://poissonconsulting.github.io/pkgtemplate/CODE_OF_CONDUCT.html).
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/poissonconsulting/pkgtemplate/blob/master/CODE_OF_CONDUCT.md).
 By contributing, you agree to abide by its terms.

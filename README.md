@@ -82,5 +82,5 @@ Please report any
 are always welcome.
 
 Please note that this project is released with a [Contributor Code of
-Conduct](https://poissonconsulting.github.io/pkgtemplate/CODE_OF_CONDUCT.html).
+Conduct](https://github.com/poissonconsulting/pkgtemplate/blob/master/CODE_OF_CONDUCT.md).
 By contributing, you agree to abide by its terms.
