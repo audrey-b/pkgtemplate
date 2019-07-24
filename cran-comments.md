@@ -8,6 +8,8 @@
 * Fedora (rhub) - devel
 * Windows (rhub) - devel 
 
+where release is R v3.6.1.
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
