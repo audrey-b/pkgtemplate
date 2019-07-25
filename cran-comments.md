@@ -1,5 +1,7 @@
 ## Test environments
 
+release 3.6.1
+
 * OS X (local) - release
 * Ubuntu (travis) - oldrelease, release and devel
 * Windows (appveyor) - release
@@ -7,8 +9,6 @@
 * Ubuntu (rhub) - release
 * Fedora (rhub) - devel
 * Windows (rhub) - devel 
-
-where release is R v3.6.1.
 
 ## R CMD check results
 
