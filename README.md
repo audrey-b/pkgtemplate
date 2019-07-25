@@ -66,7 +66,7 @@ install.packages("pkgtemplate")
 ```
 
 To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/hmstimer)
+[GitHub](https://github.com/poissonconsulting/pkgtemplate)
 
 ``` r
 # install.packages("remotes")
