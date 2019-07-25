@@ -24,7 +24,24 @@ status](https://www.r-pkg.org/badges/version/pkgtemplate)](https://cran.r-projec
 
 pkgtemplate provides a template for a new R package.
 
-## Instructions
+## Installation
+
+To install the latest release version from
+[CRAN](https://cran.r-project.org)
+
+``` r
+install.packages("pkgtemplate")
+```
+
+To install the latest development version from
+[GitHub](https://github.com/poissonconsulting/pkgtemplate)
+
+``` r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/pkgtemplate")
+```
+
+## Demonstration
 
 In order to create a new package the user should
 
@@ -55,23 +72,6 @@ In order to create a new package the user should
     [description](https://github.com/poissonconsulting/pkgtemplate/) and
     set the website to be
     <https://poissonconsulting.github.io/pkgtemplate/>.
-
-## Installation
-
-To install the latest release version from
-[CRAN](https://cran.r-project.org)
-
-``` r
-install.packages("pkgtemplate")
-```
-
-To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/pkgtemplate)
-
-``` r
-# install.packages("remotes")
-remotes::install_github("poissonconsulting/pkgtemplate")
-```
 
 ## Contribution
 
