@@ -41,7 +41,7 @@ check_scalar <- function(x) {
 check_atomic <- function(x) {
   if(is.atomic(x)) return(TRUE)
   x <- deparse(substitute(x))
-  err(x, " must be an atomic (vector, matrix or array) object")
+  err(x, " must be atomic")
 }
 
 check_atomic_vector <- function(x) {
@@ -50,34 +50,16 @@ check_atomic_vector <- function(x) {
   err(x, " must be an atomic vector")
 }
 
-check_logical <- function(x) {
-  if(is.integer(x)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be integer")
-}
-
-check_integer <- function(x) {
-  if(is.integer(x)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be integer")
-}
-
-check_double <- function(x) {
-  if(is.double(x)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be double")
-}
-
 check_numeric <- function(x) {
   if(is.numeric(x)) return(TRUE)
   x <- deparse(substitute(x))
   err(x, " must be numeric")
 }
 
-check_function <- function(x) {
-  if(is.function(x)) return(TRUE)
+check_character <- function(x) {
+  if(is.character(x)) return(TRUE)
   x <- deparse(substitute(x))
-  err(x, " must be a function")
+  err(x, " must be character")
 }
 
 check_named <- function (x) {
@@ -88,18 +70,11 @@ check_named <- function (x) {
 
 check_no_na <- function(x) {
   if(!anyNA(x)) return(TRUE)
-  err(x, "must not include any missing values")
+  x <- deparse(substitute(x))
+  err(x, " must not include any missing values")
 }
 
-check_unique <- function(x) {
-  if(!anyDuplicated(x)) return(TRUE)
-  err(x, "must be unique")
-}
-
-check_in <- function(x, y) {
-  if(all(x %in% y)) return(TRUE)
-  err()
-}
+chk_max_int <- function() .Machine$integer.max
 
 check_length <- function (x, length = c(1L, chk_max_int())) {
   check_vector(x)
