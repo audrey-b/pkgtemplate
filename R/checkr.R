@@ -1,31 +1,3 @@
-check_flag <- function(x, x_name = deparse(x)) {
-  if(isTRUE(x) || isFALSE(x)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be TRUE or FALSE")
-}
-
-check_flag_na <- function(x, x_name = deparse(x)) {
-  if(isTRUE(x) || isFALSE(x)) 
-    return(TRUE)
-  if((identical(length(x), 1L) && is.na(x) && is.logical(x)))
-    return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be TRUE, FALSE or NA")
-}
-
-check_string <- function(x, x_name = deparse(x)) {
-  if((identical(length(x), 1L) && !is.na(x) && is.character(x)))
-    return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be a character vector of length 1")
-}
-
-check_unused <- function (...) {
-  if (length(list(...))) 
-    err("... must be unused")
-  TRUE
-}
-
 check_vector <- function(x) {
   if(is.vector(x)) return(TRUE)
   x <- deparse(substitute(x))
@@ -62,16 +34,26 @@ check_character <- function(x) {
   err(x, " must be character")
 }
 
-check_named <- function (x) {
-  if(!is.null(names(x))) return(TRUE)
+check_flag <- function(x, x_name = deparse(x)) {
+  if(isTRUE(x) || isFALSE(x)) return(TRUE)
   x <- deparse(substitute(x))
-  err(x, " must be named")
+  err(x, " must be TRUE or FALSE")
 }
 
-check_no_na <- function(x) {
-  if(!anyNA(x)) return(TRUE)
+check_flag_na <- function(x, x_name = deparse(x)) {
+  if(isTRUE(x) || isFALSE(x)) 
+    return(TRUE)
+  if((identical(length(x), 1L) && is.na(x) && is.logical(x)))
+    return(TRUE)
   x <- deparse(substitute(x))
-  err(x, " must not include any missing values")
+  err(x, " must be TRUE, FALSE or NA")
+}
+
+check_string <- function(x, x_name = deparse(x)) {
+  if((identical(length(x), 1L) && !is.na(x) && is.character(x)))
+    return(TRUE)
+  x <- deparse(substitute(x))
+  err(x, " must be a character vector of length 1")
 }
 
 chk_max_int <- function() .Machine$integer.max
@@ -103,4 +85,22 @@ check_length <- function (x, length = c(1L, chk_max_int())) {
   if(length(x) %in% length) return(TRUE)
   x <- deparse(substitute(x))
   err(x, " must be of length ", cc(length, " or "))
+}
+
+check_no_na <- function(x) {
+  if(!anyNA(x)) return(TRUE)
+  x <- deparse(substitute(x))
+  err(x, " must not include any missing values")
+}
+
+check_named <- function (x) {
+  if(!is.null(names(x))) return(TRUE)
+  x <- deparse(substitute(x))
+  err(x, " must be named")
+}
+
+check_unused <- function (...) {
+  if (length(list(...))) 
+    err("... must be unused")
+  TRUE
 }

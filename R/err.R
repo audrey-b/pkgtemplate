@@ -1,10 +1,10 @@
+err <- function (...) stop(..., call. = FALSE, domain = NA)
+
 p0 <- function (..., collapse = NULL) 
   paste0(..., collapse = collapse)
 
 p <- function (..., sep = " ", collapse = NULL) 
   paste(..., sep = sep, collapse = collapse)
-
-err <- function (...) stop(..., call. = FALSE, domain = NA)
 
 cc <- function(x, con = ", ", bracket = "") {
   if(!length(x)) return(character(0))
