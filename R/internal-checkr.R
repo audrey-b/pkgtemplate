@@ -99,6 +99,12 @@ check_named <- function (x) {
   err(x, " must be named")
 }
 
+check_in <- function(x, y) {
+  if(all(x %in% y)) return(TRUE)
+  x <- deparse(substitute(x))
+  err(x, " must be ", cc_or(y))
+}
+
 check_unused <- function (...) {
   if (length(list(...))) 
     err("... must be unused")

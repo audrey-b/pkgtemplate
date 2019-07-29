@@ -112,6 +112,13 @@ test_that("check_named", {
   expect_error(check_named(1L), "1L must be named")
 })
 
+test_that("check_in", {
+  expect_true(check_in(1, 1))
+  expect_true(check_in(1, 1L))
+  expect_true(check_in(1, 1:2))
+  expect_error(check_in(1, 2:3), "1 must be '2' or '3'")
+})
+
 test_that("check_unused", {
   expect_true(check_unused())
   expect_error(check_unused(1), "^... must be unused$")
