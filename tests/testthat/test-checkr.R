@@ -1,13 +1,13 @@
 context("check")
 
 test_that("check_flag()", {
-  expect_identical(check_flag(TRUE), TRUE)
-  expect_identical(check_flag(FALSE), TRUE)
+  expect_true(check_flag(TRUE))
+  expect_true(check_flag(FALSE))
   expect_error(check_flag(NA), "^NA must be TRUE or FALSE$")
   y <- TRUE
-  expect_identical(check_flag(y), TRUE)
+  expect_true(check_flag(y))
   y <- c("name" = TRUE)
-  expect_identical(check_flag(y), TRUE)
+  expect_true(check_flag(y))
   y <- NA
   expect_error(check_flag(y), "^y must be TRUE or FALSE$")
   z <- 1
@@ -15,17 +15,17 @@ test_that("check_flag()", {
 })
 
 test_that("check_flag_na()", {
-  expect_identical(check_flag_na(TRUE), TRUE)
-  expect_identical(check_flag_na(FALSE), TRUE)
-  expect_identical(check_flag_na(NA), TRUE)
+  expect_true(check_flag_na(TRUE))
+  expect_true(check_flag_na(FALSE))
+  expect_true(check_flag_na(NA))
   y <- TRUE
-  expect_identical(check_flag_na(y), TRUE)
+  expect_true(check_flag_na(y))
   y <- c("name" = TRUE)
-  expect_identical(check_flag_na(y), TRUE)
+  expect_true(check_flag_na(y))
   y <- NA
-  expect_identical(check_flag_na(y), TRUE)
+  expect_true(check_flag_na(y))
   y <- c("name" = NA)
-  expect_identical(check_flag_na(y), TRUE)
+  expect_true(check_flag_na(y))
   y <- NA_integer_
   expect_error(check_flag_na(y), "^y must be TRUE, FALSE or NA$")
   y <- 1
@@ -34,28 +34,40 @@ test_that("check_flag_na()", {
 
 test_that("check_string", {
   z <- "str"
-  expect_identical(check_string(z), TRUE)
+  expect_true(check_string(z))
   z <- ""
-  expect_identical(check_string(z), TRUE)
+  expect_true(check_string(z))
   z <- c("name" = "str")
-  expect_identical(check_string(z), TRUE)
+  expect_true(check_string(z))
   z <- 1
-  expect_error(check_string(z), "^z must be a string [(]character vector of length 1[)]$")
+  expect_error(check_string(z), "^z must be a character vector of length 1$")
   z <- character(0)
-  expect_error(check_string(z), "^z must be a string [(]character vector of length 1[)]$")
+  expect_error(check_string(z), "^z must be a character vector of length 1$")
   z <- c("1", "2")
-  expect_error(check_string(z), "^z must be a string [(]character vector of length 1[)]$")
-  expect_error(check_string(NA_character_), "^NA_character_ must be a string [(]character vector of length 1[)]$")
+  expect_error(check_string(z), "^z must be a character vector of length 1$")
+  expect_error(check_string(NA_character_), "^NA_character_ must be a character vector of length 1$")
 })
 
 test_that("check_unused", {
-  expect_identical(check_unused(), TRUE)
+  expect_true(check_unused())
   expect_error(check_unused(1), "^... must be unused$")
 })
 
 test_that("check_named", {
   y <- c("z" = 1L)
-  expect_identical(check_named(y), TRUE)
-  expect_identical(check_named(y[-1]), TRUE)
+  expect_true(check_named(y))
+  expect_true(check_named(y[-1]))
   expect_error(check_named(1L), "1L must be named")
+})
+
+test_that("check_length", {
+  expect_true(check_length(1))
+  expect_true(check_length(1:3))
+  expect_error(check_length(character(0)), 
+               "character[(]0[)] must have a length between 1 and 2147483647")
+  expect_true(check_length(character(0), 0L))
+  expect_error(check_length(1, 0), "1 must have a length of 0")
+  expect_error(check_length(1, 2), "1 must have a length of 2")
+  expect_error(check_length(1, c(2,4,3)), "1 must be of length 2, 3 or 4")
+  expect_error(check_length(1, c(2,2,3)), "1 must be of length 2 or 3")
 })
