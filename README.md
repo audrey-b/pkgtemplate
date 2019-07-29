@@ -24,7 +24,7 @@ status](https://www.r-pkg.org/badges/version/pkgtemplate)](https://cran.r-projec
 
 pkgtemplate provides a template for a new R package.
 
-It includes useful internal utility functions such as `check_flag()`.
+It includes useful internal functions.
 
 ## Installation
 

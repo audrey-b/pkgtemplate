@@ -1,4 +1,4 @@
-context("check")
+context("internal-check")
 
 test_that("check_vector", {
   expect_true(check_vector(integer(0)))

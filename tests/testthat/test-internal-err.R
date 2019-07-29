@@ -1,4 +1,4 @@
-context("err")
+context("internal-err")
 
 test_that("cc",{
   expect_identical(cc(numeric(0)), character(0))
