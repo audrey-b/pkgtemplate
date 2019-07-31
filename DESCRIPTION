@@ -9,16 +9,13 @@ Authors@R: c(
     )
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
-Depends: R (>= 3.5)
 Imports: 
-  err,
-  checkr
+  chk
 Suggests: 
     covr,
     testthat
 Remotes:
-  poissonconsulting/err,
-  poissonconsulting/checkr
+  poissonconsulting/chk
 URL: https://github.com/poissonconsulting/pkgtemplate
 BugReports: https://github.com/poissonconsulting/pkgtemplate/issues
 Encoding: UTF-8

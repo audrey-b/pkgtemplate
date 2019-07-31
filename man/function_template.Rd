@@ -4,10 +4,12 @@
 \alias{function_template}
 \title{Function Template}
 \usage{
-function_template(x = TRUE)
+function_template(x = TRUE, chk = TRUE)
 }
 \arguments{
 \item{x}{A flag specifying whether to return TRUE or FALSE.}
+
+\item{chk}{A flag specifying whether to check inputs.}
 }
 \value{
 A flag.
