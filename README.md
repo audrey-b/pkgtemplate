@@ -57,13 +57,11 @@ In order to create a new package the user should
     Notes.
 4)  Knit this `README.Rmd` file and `pkgdown::build_site()`.
 5)  Add the project to
-    [Travis](https://www.travis-ci.com/poissonconsulting/pkgtemplate)
-    and in the
-    [Settings](https://www.travis-ci.com/poissonconsulting/pkgtemplate/settings)
-    add a Cron Job to run the master branch daily if there hasn’t been a
-    build in the last 24h.
+    [Travis](https://www.travis-ci.com/poissonconsulting/) and in the
+    Settings add a Cron Job to run the master branch daily if there
+    hasn’t been a build in the last 24h.
 6)  Add the project to
-    [Appveyor](https://ci.appveyor.com/project/poissonconsulting/pkgtemplate).
+    [Appveyor](https://ci.appveyor.com/project/poissonconsulting).
 7)  Rename the `pkgtemplate.Rproj` file.
 8)  Push the changes to the new repository.
 9)  Go to the repository GitHub
