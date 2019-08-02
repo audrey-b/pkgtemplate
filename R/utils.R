@@ -9,6 +9,12 @@ sys_time <- function() {
   time
 }
 
+tibble <- function(...) {
+  data <- data.frame(..., stringsAsFactors = FALSE)
+  class(data) <- c("tbl_df", "tbl", "data.frame")
+  data
+}
+
 is_try_error <- function(x) inherits(x, "try-error")
 
 # from https://recology.info/2018/10/limiting-dependencies/
