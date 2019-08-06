@@ -3,6 +3,11 @@ set_class <- function(x, class) {
   x
 }
 
+set_names <- function(x, names) {
+  names(x) <- names
+  x
+}
+
 sys_time <- function() {
   time <- Sys.time()
   attr(time, "tzone") <- "UTC" 
@@ -25,3 +30,14 @@ str_extract <- function(x, y) regmatches(x, regexpr(y, x))
 
 # from https://recology.info/2018/10/limiting-dependencies/
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
+
+# from https://github.com/poissonconsulting/yesno
+yesno <- function (...) {
+    yeses <- c("Yes", "Definitely", "For sure", "Yup", "Yeah", 
+        "I agree", "Absolutely")
+    nos <- c("No way", "Not yet", "I forget", "No", "Nope", "Uhhhh... Maybe?")
+    qs <- c(sample(yeses, 1), sample(nos, 2))
+    rand <- sample(length(qs))
+    cat(paste0(..., collapse = ""))
+    utils::menu(qs[rand]) == which(rand == 1)
+}
