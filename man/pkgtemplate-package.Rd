@@ -11,20 +11,13 @@ What the package does (one paragraph).
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/pkgtemplate}
-  \item Report bugs at \url{https://github.com/poissonconsulting/pkgtemplate/issues}
+  \item \url{https://github.com/audrey-b/pkgtemplate}
+  \item Report bugs at \url{https://github.com/audrey-b/pkgtemplate/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (0000-0002-7683-4592)
-
-Other contributors:
-\itemize{
-  \item Sebastian Dalgarno \email{seb@poissonconsulting.ca} (0000-0002-3658-4517) [contributor]
-  \item Evan Amies-Galonski \email{evan@poissonconsulting.ca} (-3188) [contributor]
-  \item Poisson Consulting [copyright holder, funder]
-}
+\strong{Maintainer}: Audrey Beliveau \email{audrey.beliveau@uwaterloo.ca}
 
 }
 \keyword{internal}
